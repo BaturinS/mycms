@@ -36,6 +36,7 @@ class Links extends Controller {
         $this->lib_mng->add($this->iname, 'Добавление новой ссылки');
         
     }
+	
 }
 
 ?>
