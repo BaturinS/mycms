@@ -11,7 +11,6 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class mdl_link extends CRUD {
     
     var $table = 'links'; // Имя таблицы
-    
     var $idkey = 'link_id';
     
     // Правила валидации для добавления

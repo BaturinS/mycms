@@ -36,6 +36,15 @@ class Links extends Controller {
         $this->lib_mng->add($this->iname, 'Добавление новой ссылки');
         
     }
+    
+    /**
+     * Просмотр ссылки
+     */
+     function show ($id) {
+        
+        $this->lib_mng->show($this->iname, $id, 'Просмотр ссылки');
+        
+     }
 	
 }
 

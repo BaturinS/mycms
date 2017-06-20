@@ -32,6 +32,24 @@ class lib_mng {
         
     }
     
+    function show ($name, $id, $title = '') {
+        
+        $CI = &get_instance();
+        
+        $md = 'mdl_'.$name;
+        
+        $CI->load->model($md); // Загрузка модели
+        
+        $data = $CI->{$md}->get($id);
+        
+        if (empty($data)) {
+            die('Такой записи нет в базе');
+        }
+        
+        $CI->lib_view->admin_page($name.'/view', $data, $title);
+        
+    }
+    
 }
 
 ?>
