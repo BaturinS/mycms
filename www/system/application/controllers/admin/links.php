@@ -45,6 +45,24 @@ class Links extends Controller {
         $this->lib_mng->show($this->iname, $id, 'Просмотр ссылки');
         
      }
+     
+     /**
+     * Редактирование ссылки
+     */
+     function edit ($id) {
+        
+        $this->lib_mng->edit($this->iname, $id, 'Изменение ссылки');
+        
+     }
+     
+     /**
+     * Удаление ссылки
+     */
+     function del ($id) {
+        
+        $this->lib_mng->del($this->iname, $id);
+        
+     }
 	
 }
 

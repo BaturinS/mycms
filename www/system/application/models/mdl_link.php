@@ -36,6 +36,23 @@ class mdl_link extends CRUD {
     
     );
     
+    // Правила валидации для редактирования
+    var $edit_rules = array (
+        
+        array (
+            'field' => 'descr',
+            'label' => 'Описание',
+            'rules' => 'required|valid_title'
+        ),
+        
+        array (
+            'field' => 'url',
+            'label' => 'URL',
+            'rules' => 'required|valid_url'
+        ),
+    
+    );
+    
 }
 
 ?>

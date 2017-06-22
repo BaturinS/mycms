@@ -55,7 +55,7 @@ class Crud extends Model {
     /**
      * Функция редактирования
      */
-    function edit ($id, $data) {
+    function edit ($id) {
         
         $this->form_validation->set_rules($this->edit_rules);
         
@@ -72,7 +72,7 @@ class Crud extends Model {
             
             $this->db->where($this->idkey, $id);
         	$this->db->update($this->table, $data);
-            return TRUE; //Возвращает истинно
+            return TRUE;
             
         } else {
             
