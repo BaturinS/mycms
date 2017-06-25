@@ -57,6 +57,26 @@ class lib_mng {
     }
     
     /**
+     * Отображение списка объектов
+     */
+    function show_index ($name, $title = '') {
+        
+        $CI = &get_instance();
+        
+        $md = 'mdl_'.$name;
+        
+        $CI->load->model($md); // Загрузка модели
+        
+        $list = $CI->{$md}->getlist();
+        
+        $data = array();
+        $data['list'] = $list; // Присваиваем список записей
+        
+        $CI->lib_view->admin_page($name.'/index', $data, $title);
+        
+    }
+    
+    /**
      * Редактирование информации об объекте
      */
     function edit ($name, $id, $title = '') {

@@ -23,9 +23,43 @@ class Links extends Controller {
         
     }
     
+    function generator () {
+        
+        for ($i = 1100; $i < 1200; $i++) {
+            
+            $data = array (
+                'link_id' => $i,
+                'descr' => $i,
+                'url' => $i
+            );
+
+            $this->db->insert('links', $data);
+            
+        }
+        
+        echo 'Записи добавлены';
+        
+    }
+    
+    function mass_del () {
+        
+        for ($i = 1100; $i < 1200; $i++) {
+            
+            $this->db->where('link_id', $i);
+            $this->db->delete('links');
+            
+        }
+        
+        echo 'Записи удалены';
+        
+    }
+    
+    /**
+     * Список ссылок
+     */
     function index () {
-        // Временная заглушка
-        echo 'Здесь будет список ссылок';        
+        
+        $this->lib_mng->show_index($this->iname, 'Список ссылок');
     }
     
     /**

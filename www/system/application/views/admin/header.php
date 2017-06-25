@@ -10,5 +10,10 @@
 
 <body>
 <h3>Хедер</h3>
-<p><b><?=anchor('admin', 'Главная')?> | <?=anchor('admin/pages', 'Страницы')?> | <?=anchor('links', 'Ссылки')?> | <?=anchor('admin/settings', 'Настройки')?> | <?=anchor('admin/logout', 'Выход')?></b></p>
+<p><b>
+<?=anchor('admin', 'Главная')?> 
+| <?=anchor('admin/pages', 'Страницы')?> 
+| <?=anchor('admin/links', 'Ссылки')?> 
+| <?=anchor('admin/settings', 'Настройки')?> 
+| <?=anchor('admin/logout', 'Выход')?></b></p>
 <h1><?=$page_title?></h1>
