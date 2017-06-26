@@ -101,9 +101,18 @@ class Crud extends Model {
     /**
      * Получение списка
      */
-    function getlist () {
+    function getlist ($start_from = FALSE) {
+        
+        if ($start_from !== FALSE) {
+        
+            $this->db->limit($this->config->item('cms_per_page'), $start_from);
+            // Ограничение
+            
+        }
+        
         $query = $this->db->get($this->table);
-        return $query->result_array();	
+        return $query->result_array();
+        	
     }
     
 }

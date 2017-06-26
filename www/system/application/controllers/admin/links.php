@@ -25,7 +25,7 @@ class Links extends Controller {
     
     function generator () {
         
-        for ($i = 1100; $i < 1200; $i++) {
+        for ($i = 1101; $i < 1201; $i++) {
             
             $data = array (
                 'link_id' => $i,
@@ -43,7 +43,7 @@ class Links extends Controller {
     
     function mass_del () {
         
-        for ($i = 1100; $i < 1200; $i++) {
+        for ($i = 1101; $i < 1201; $i++) {
             
             $this->db->where('link_id', $i);
             $this->db->delete('links');
@@ -57,9 +57,9 @@ class Links extends Controller {
     /**
      * Список ссылок
      */
-    function index () {
+    function index ($link_num = 0) {
         
-        $this->lib_mng->show_index($this->iname, 'Список ссылок');
+        $this->lib_mng->show_index($this->iname, 'Список ссылок', $link_num);
     }
     
     /**

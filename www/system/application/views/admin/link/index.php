@@ -22,6 +22,8 @@
 
 </table>
 
+<p align="center"><?=$page_links?></p>
+
 <? else : ?>
 
 Нет записей

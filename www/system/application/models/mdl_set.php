@@ -11,7 +11,6 @@ class mdl_set extends Model {
     
     function mdl_set () {
         parent::Model();
-        
         $this->load_config();
     }
     

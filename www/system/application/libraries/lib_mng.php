@@ -59,7 +59,18 @@ class lib_mng {
     /**
      * Отображение списка объектов
      */
-    function show_index ($name, $title = '') {
+    function show_index ($name, $title = '', $start_page = 0) {
+        
+        // Проверяем не был ли сброшен список
+        if ($start_page === 'list') {
+            // Здесь будет сброс списка
+            $start_page = 0; // Ставим 0 - для сброса
+        }
+        
+        // Если не число - ставим ноль
+        if (!is_numeric($start_page)) {
+            $start_page = 0;
+        }
         
         $CI = &get_instance();
         
@@ -67,10 +78,33 @@ class lib_mng {
         
         $CI->load->model($md); // Загрузка модели
         
-        $list = $CI->{$md}->getlist();
+        // Грузим библиотеку Pagination
+        $CI->load->library('pagination');
+        
+        // Загрузка общего количества
+        $total = $CI->{$md}->getlist();
+        
+        // Подготовка массива настроек
+        $config = array();
+        $config['base_url'] = base_url().'admin/'.$name.'s/index/';
+        $config['total_rows'] = count($total);
+        $config['per_page'] = $CI->config->item('cms_per_page');
+        $config['uri_segment'] = 4;
+        $config['first_link'] = 'Первая';
+        $config['last_link'] = 'Последняя';
+        $config['prev_link'] = 'Предыдущая';
+        $config['next_link'] = 'Следующая';
+        
+        // Устанавливаем настройки
+        $CI->pagination->initialize($config);
+        
+        unset ($total); // Освобождаем память от этой переменной
+        
+        $list = $CI->{$md}->getlist($start_page);
         
         $data = array();
         $data['list'] = $list; // Присваиваем список записей
+        $data['page_links'] = $CI->pagination->create_links(); // Ссылки
         
         $CI->lib_view->admin_page($name.'/index', $data, $title);
         
