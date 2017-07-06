@@ -97,6 +97,15 @@ class Links extends Controller {
         $this->lib_mng->del($this->iname, $id);
         
      }
+     
+     /**
+      * Сортировка
+      */
+      function sort ($field) {
+        
+        $this->lib_mng->set_sort($this->iname, $field);
+        
+      }
 	
 }
 

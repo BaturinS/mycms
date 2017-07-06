@@ -63,8 +63,11 @@ class lib_mng {
         
         // Проверяем не был ли сброшен список
         if ($start_page === 'list') {
-            // Здесь будет сброс списка
+            
+            $this->reset_set(); // Здесь сброс списка
+            
             $start_page = 0; // Ставим 0 - для сброса
+            
         }
         
         // Если не число - ставим ноль
@@ -109,6 +112,55 @@ class lib_mng {
         $CI->lib_view->admin_page($name.'/index', $data, $title);
         
     }
+    
+    /**
+     * Установка сортировки
+     */
+     function set_sort ($name, $field) {
+        
+        $CI = &get_instance();
+        
+        $md = 'mdl_'.$name;
+        
+        $CI->load->model($md); // Загрузка модели
+        
+        // Массив с данными для сессии
+        $data = array();
+        $data['sort_by'] = $field;
+        $data['sort_dir'] = 'ASC';
+        
+        // Если в сессии текущая сортировка - меняем на обратную
+        if ( ($CI->session->userdata('sort_by') == $field) AND 
+                ($CI->session->userdata('sort_dir') == 'ASC') ) {
+                    
+                    $data['sort_dir'] = 'DESC';
+                    
+        }
+        
+        // Записываем в сессию
+        $CI->session->set_userdata($data);
+        
+        // Редирект к списку записей
+        redirect('admin/'.$name.'s/');
+        
+     }
+     
+     /**
+      * Сброс сортировки и поиска
+      */
+      function reset_set () {
+        
+        $CI = &get_instance();
+        
+        // Массив полей для очистки
+        $data = array();
+        $data['sort_by'] = '';
+        $data['sort_dir'] = '';
+        
+        // Уничтожаем
+        $CI->session->unset_userdata($data);
+        
+      }
     
     /**
      * Редактирование информации об объекте

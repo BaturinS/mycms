@@ -3,10 +3,10 @@
 <table width="780" border="1" align="center" cellpadding="4" cellspacing="0">
 
 <tr>
-    <th width="100">ID ссылки</th>
-    <th width="240">Название ссылки</th>
-    <th>URL ссылки</th>
-    <th>Кликов</th>
+    <th width="100"><?=anchor('admin/links/sort/link_id', 'ID ссылки')?></th>
+    <th width="240"><?=anchor('admin/links/sort/descr', 'Название ссылки')?></th>
+    <th><?=anchor('admin/links/sort/url', 'URL ссылки')?></th>
+    <th width="80"><?=anchor('admin/links/sort/cliks', 'Кликов')?></th>
 </tr>
 
 <? foreach ($list as $one) : ?>

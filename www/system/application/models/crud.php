@@ -103,6 +103,17 @@ class Crud extends Model {
      */
     function getlist ($start_from = FALSE) {
         
+        // Ставим список сортировки
+        $sort_by = $this->session->userdata('sort_by');
+        $sort_dir = $this->session->userdata('sort_dir');
+        
+        // Если не пустые значения, то ставим сортировку
+        if (!empty($sort_by)) {
+            
+            $this->db->order_by($sort_by, $sort_dir);
+            
+        }
+        
         if ($start_from !== FALSE) {
         
             $this->db->limit($this->config->item('cms_per_page'), $start_from);
