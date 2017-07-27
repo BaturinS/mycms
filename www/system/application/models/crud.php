@@ -109,16 +109,21 @@ class Crud extends Model {
         
         // Если не пустые значения, то ставим сортировку
         if (!empty($sort_by)) {
-            
             $this->db->order_by($sort_by, $sort_dir);
-            
+        }
+        
+        // Для поиска
+        $search = $this->session->userdata('search');
+        $search_by = $this->session->userdata('search_by');
+        
+        // Если не пустые значения, то ставим поиск
+        if (!empty($search)) {
+            $this->db->like($search_by, '%'.$search.'%');
         }
         
         if ($start_from !== FALSE) {
-        
             $this->db->limit($this->config->item('cms_per_page'), $start_from);
             // Ограничение
-            
         }
         
         $query = $this->db->get($this->table);

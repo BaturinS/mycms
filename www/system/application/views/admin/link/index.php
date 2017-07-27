@@ -30,4 +30,27 @@
 
 <? endif; ?>
 
+<?=form_open('admin/links/search')?>
+
+<table align="center" border="0">
+
+    <tr>
+        <td>Поиск:<br /><input type="text" name="str" value="" /></td>
+        <td><br /><select name="field">
+        <option value="link_id">ID ссылки</option>
+        <option value="descr">Название ссылки</option>
+        <option value="url">URL</option>
+        </select></td>
+    </tr>
+    
+    <tr>
+        <td><input type="submit" value="Найти" /></td><td>&nbsp;</td>
+    </tr>
+
+</table>
+
+</form>
+
+<br />
+
 <p><?=anchor('admin/links/add/', 'Добавить новую ссылку')?></p>

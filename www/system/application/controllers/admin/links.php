@@ -12,7 +12,9 @@ class Links extends Controller {
     
     var $iname = 'link';
         
-    // Конструктор
+    /**
+     * Конструктор
+     */
     function Links () {
         
         parent::Controller();
@@ -20,37 +22,6 @@ class Links extends Controller {
         $mdl_name = 'mdl_'.$this->iname; // Имя модели
         
         $this->load->model($mdl_name); // Загружаем модель        
-        
-    }
-    
-    function generator () {
-        
-        for ($i = 1101; $i < 1201; $i++) {
-            
-            $data = array (
-                'link_id' => $i,
-                'descr' => $i,
-                'url' => $i
-            );
-
-            $this->db->insert('links', $data);
-            
-        }
-        
-        echo 'Записи добавлены';
-        
-    }
-    
-    function mass_del () {
-        
-        for ($i = 1101; $i < 1201; $i++) {
-            
-            $this->db->where('link_id', $i);
-            $this->db->delete('links');
-            
-        }
-        
-        echo 'Записи удалены';
         
     }
     
@@ -74,38 +45,45 @@ class Links extends Controller {
     /**
      * Просмотр ссылки
      */
-     function show ($id) {
+    function show ($id) {
         
         $this->lib_mng->show($this->iname, $id, 'Просмотр ссылки');
         
-     }
+    }
      
-     /**
+    /**
      * Редактирование ссылки
      */
-     function edit ($id) {
+    function edit ($id) {
         
         $this->lib_mng->edit($this->iname, $id, 'Изменение ссылки');
         
-     }
+    }
      
-     /**
+    /**
      * Удаление ссылки
      */
-     function del ($id) {
+    function del ($id) {
         
         $this->lib_mng->del($this->iname, $id);
         
-     }
+    }
      
-     /**
-      * Сортировка
-      */
-      function sort ($field) {
+    /**
+     * Сортировка
+     */
+    function sort ($field) {
         
         $this->lib_mng->set_sort($this->iname, $field);
         
-      }
+    }
+      
+    /**
+     * Поиск
+     */
+    function search () {
+        $this->lib_mng->do_search($this->iname);
+    }
 	
 }
 

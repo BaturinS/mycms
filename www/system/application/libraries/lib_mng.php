@@ -156,11 +156,43 @@ class lib_mng {
         $data = array();
         $data['sort_by'] = '';
         $data['sort_dir'] = '';
+        $data['search'] = '';
+        $data['search_by'] = '';
         
         // Уничтожаем
         $CI->session->unset_userdata($data);
         
       }
+      
+    /**
+     * Поиск
+     */
+     function do_search ($name) {
+        
+        $CI = &get_instance();
+        
+        $search = $CI->input->post('str');
+        $search_by = $CI->input->post('field');
+        
+        // Если ничего не задали для поиска - просто редирект
+        if (empty($search)) {
+            redirect('admin/'.$name.'s/');
+        }
+        
+        // Устанавливаем данные для сессии
+        
+        // Массив с данными для сессии
+        $data = array();
+        $data['search'] = $search;
+        $data['search_by'] = $search_by;
+        
+        // Записываем в сессию
+        $CI->session->set_userdata($data);
+        
+        // Редирект к списку записей
+        redirect ('admin/'.$name.'s/');
+        
+     }
     
     /**
      * Редактирование информации об объекте
