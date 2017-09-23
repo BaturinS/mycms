@@ -3,22 +3,22 @@
 <table border="0" width="600" align="left" cellspacing="4">
 
 <tr>
-    <td align="right"><b>ID страницы:</b></td>
+    <td align="right"><b>ID СЃС‚СЂР°РЅРёС†С‹:</b></td>
     <td align="left"><?=$page_id?></td>
 </tr>
 <tr>
-    <td align="right"><b>Название страницы:</b></td>
+    <td align="right"><b>РќР°Р·РІР°РЅРёРµ СЃС‚СЂР°РЅРёС†С‹:</b></td>
     <td align="left"><input type="text" name="title" value="<?=set_value('title', $title)?>" /></td>
 </tr>
 <tr>
-    <th align="right">Показывать:</th>
+    <th align="right">РџРѕРєР°Р·С‹РІР°С‚СЊ:</th>
     <td align="left"><input type="checkbox" name="showed" value="1" <?=set_checkbox('showed',1,($showed==1))?> /></td>
 </tr>
 
 <tr>
     <td colspan="2" align="center">
         <br />
-        <b>Текст страницы:</b>
+        <b>РўРµРєСЃС‚ СЃС‚СЂР°РЅРёС†С‹:</b>
         <br />
         <br />
         <textarea name="text" cols="60" rows="12"><?=set_value('text',$text)?>
@@ -27,7 +27,7 @@
 </tr>
 <tr>
     <td align="right">&nbsp;</td>
-    <td align="left"><input type="submit" value="Сохранить изменения" /></td>
+    <td align="left"><input type="submit" value="РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ" /></td>
 </tr>
 
 </table>

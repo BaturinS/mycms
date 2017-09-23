@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Îïèñàíèå ôàéëà: Ðàñøèðåíèå êëàññà âàëèäàöèè ôîðì
+ * ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ñ„Ð°Ð¹Ð»Ð°: Ð Ð°ÑÑˆÐ¸Ñ€ÐµÐ½Ð¸Ðµ ÐºÐ»Ð°ÑÑÐ° Ð²Ð°Ð»Ð¸Ð´Ð°Ñ†Ð¸Ð¸ Ñ„Ð¾Ñ€Ð¼
  * @author KNARS
  * @copyright 25.5.2017 23:19
  */
@@ -11,46 +11,46 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class MY_Form_validation extends CI_Form_validation {
     
     /**
-     * Âûçîâ ðîäèòåëüñêîãî êëàññà
+     * Ð’Ñ‹Ð·Ð¾Ð² Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒÑÐºÐ¾Ð³Ð¾ ÐºÐ»Ð°ÑÑÐ°
      */
      function MY_Form_validation () {
         
         parent::CI_Form_validation();
         
-        // Çàãðóæàåì íîâûé ÿçûêîâîé ôàéë
+        // Ð—Ð°Ð³Ñ€ÑƒÐ¶Ð°ÐµÐ¼ Ð½Ð¾Ð²Ñ‹Ð¹ ÑÐ·Ñ‹ÐºÐ¾Ð²Ð¾Ð¹ Ñ„Ð°Ð¹Ð»
         $CI = &get_instance();
         $CI->lang->load('validation_new');
         
      }
      
      /**
-      * Ôóíêöèÿ ïðîâåðêè íà íàëè÷èå ìàëåíüêèõ áóêâ è öèôð
+      * Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ¸ Ð½Ð° Ð½Ð°Ð»Ð¸Ñ‡Ð¸Ðµ Ð¼Ð°Ð»ÐµÐ½ÑŒÐºÐ¸Ñ… Ð±ÑƒÐºÐ² Ð¸ Ñ†Ð¸Ñ„Ñ€
       */
       function az_numeric($str) {
         return (!preg_match("/^([a-z0-9])+$/i", $str)) ? FALSE : TRUE;
       }
       
       /**
-      * Âàëèäàöèÿ url
+      * Ð’Ð°Ð»Ð¸Ð´Ð°Ñ†Ð¸Ñ url
       */
       function valid_url($str) {
         return (!preg_match('/(http|https):\/\/(\w+:(0,1)\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:;.?+=&%@!\-\/]))?/', $str)) ? FALSE : TRUE;
       }
       
       /**
-      * Âàëèäíîå íàçâàíèå
+      * Ð’Ð°Ð»Ð¸Ð´Ð½Ð¾Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ
       */
       function valid_title($str) {
-        return (!preg_match('/^[À-ßà-ÿ¨¸\w\d\s\.\,\+\-\_\!\?\#\%\@\¹\/\(\)\[\]\:\&\$\*]{1,250}$/', $str)) ? FALSE : TRUE;
+        return (!preg_match('/^[Ð-Ð¯Ð°-ÑÐÑ‘\w\d\s\.\,\+\-\_\!\?\#\%\@\â„–\/\(\)\[\]\:\&\$\*]{1,250}$/u', $str)) ? FALSE : TRUE;
       }
       
       /**
-       * Ïðîâåðêà íà óíèêàëüíîñòü
+       * ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° ÑƒÐ½Ð¸ÐºÐ°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ
        */
        function uniq ($str, $param) {
-        // Îáúåêò CI
+        // ÐžÐ±ÑŠÐµÐºÑ‚ CI
         $CI = &get_instance();
-        // Èìÿ òàáëèöû
+        // Ð˜Ð¼Ñ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹
         $tname = str_replace('_id', 's', $param);
         $CI->db->where($param, $str);
         return ($CI->db->count_all_results($tname)==0);

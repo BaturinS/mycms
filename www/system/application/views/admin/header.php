@@ -2,18 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="author" content="KNARS" />
 
-	<title>[Панель Администратора] - <?=$page_title?></title>
+	<title>[РџР°РЅРµР»СЊ РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°] - <?=$page_title?></title>
 </head>
 
 <body>
-<h3>Хедер</h3>
+<h3>РҐРµРґРµСЂ</h3>
 <p><b>
-<?=anchor('admin', 'Главная')?> 
-| <?=anchor('admin/pages/index/list', 'Страницы')?> 
-| <?=anchor('admin/links/index/list', 'Ссылки')?> 
-| <?=anchor('admin/settings', 'Настройки')?> 
-| <?=anchor('admin/logout', 'Выход')?></b></p>
+<?=anchor('admin', 'Р“Р»Р°РІРЅР°СЏ')?> 
+| <?=anchor('admin/pages/index/list', 'РЎС‚СЂР°РЅРёС†С‹')?> 
+| <?=anchor('admin/links/index/list', 'РЎСЃС‹Р»РєРё')?> 
+| <?=anchor('admin/settings', 'РќР°СЃС‚СЂРѕР№РєРё')?> 
+| <?=anchor('admin/logout', 'Р’С‹С…РѕРґ')?></b></p>
 <h1><?=$page_title?></h1>

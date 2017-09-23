@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Îïèñàíèå ôàéëà: Êîíòðîëëåð "Ñòðàíèöû"
+ * ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ñ„Ð°Ð¹Ð»Ð°: ÐšÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð»ÐµÑ€ "Ð¡Ñ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹"
  * @author KNARS
  * @copyright 10.8.2017 03:09
  */
@@ -13,55 +13,55 @@ class Pages extends Controller {
     var $iname = 'page';
         
     /**
-     * Êîíñòðóêòîð
+     * ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€
      */
     function Pages () {
         
         parent::Controller();
         
-        $mdl_name = 'mdl_'.$this->iname; // Èìÿ ìîäåëè
+        $mdl_name = 'mdl_'.$this->iname; // Ð˜Ð¼Ñ Ð¼Ð¾Ð´ÐµÐ»Ð¸
         
-        $this->load->model($mdl_name); // Çàãðóæàåì ìîäåëü        
+        $this->load->model($mdl_name); // Ð—Ð°Ð³Ñ€ÑƒÐ¶Ð°ÐµÐ¼ Ð¼Ð¾Ð´ÐµÐ»ÑŒ        
         
     }
     
     /**
-     * Ñïèñîê ñòðàíèö
+     * Ð¡Ð¿Ð¸ÑÐ¾Ðº ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†
      */
     function index ($page_num = 0) {
         
-        $this->lib_mng->show_index($this->iname, 'Ñïèñîê ñòðàíèö', $page_num);
+        $this->lib_mng->show_index($this->iname, 'Ð¡Ð¿Ð¸ÑÐ¾Ðº ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†', $page_num);
     }
     
     /**
-     * Äîáàâëåíèå íîâîé ñòðàíèöû
+     * Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð½Ð¾Ð²Ð¾Ð¹ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹
      */
     function add () {
         
-        $this->lib_mng->add($this->iname, 'Äîáàâëåíèå íîâîé ñòðàíèöû');
+        $this->lib_mng->add($this->iname, 'Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð½Ð¾Ð²Ð¾Ð¹ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹');
         
     }
     
     /**
-     * Ïðîñìîòð ñòðàíèöû
+     * ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹
      */
     function show ($id) {
         
-        $this->lib_mng->show($this->iname, $id, 'Ïðîñìîòð ñòðàíèöû');
+        $this->lib_mng->show($this->iname, $id, 'ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹');
         
     }
      
     /**
-     * Ðåäàêòèðîâàíèå ñòðàíèöû
+     * Ð ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹
      */
     function edit ($id) {
         
-        $this->lib_mng->edit($this->iname, $id, 'Èçìåíåíèå ñòðàíèöû');
+        $this->lib_mng->edit($this->iname, $id, 'Ð˜Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ðµ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹');
         
     }
      
     /**
-     * Óäàëåíèå ñòðàíèöû
+     * Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹
      */
     function del ($id) {
         
@@ -70,7 +70,7 @@ class Pages extends Controller {
     }
      
     /**
-     * Ñîðòèðîâêà
+     * Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ°
      */
     function sort ($field) {
         
@@ -79,7 +79,7 @@ class Pages extends Controller {
     }
       
     /**
-     * Ïîèñê
+     * ÐŸÐ¾Ð¸ÑÐº
      */
     function search () {
         $this->lib_mng->do_search($this->iname);

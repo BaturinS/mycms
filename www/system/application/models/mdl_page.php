@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Îïèñàíèå ôàéëà: Ìîäåëü äëÿ "Ñòðàíèö"
+ * ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ñ„Ð°Ð¹Ð»Ð°: ÐœÐ¾Ð´ÐµÐ»ÑŒ Ð´Ð»Ñ "Ð¡Ñ‚Ñ€Ð°Ð½Ð¸Ñ†"
  * @author KNARS
  * @copyright 10.8.2017 3:19
  */
@@ -10,62 +10,62 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class mdl_page extends CRUD {
     
-    var $table = 'pages'; // Èìÿ òàáëèöû
+    var $table = 'pages'; // Ð˜Ð¼Ñ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹
     var $idkey = 'page_id';
     
-    // Ïðàâèëà âàëèäàöèè äëÿ äîáàâëåíèÿ
+    // ÐŸÑ€Ð°Ð²Ð¸Ð»Ð° Ð²Ð°Ð»Ð¸Ð´Ð°Ñ†Ð¸Ð¸ Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ
     var $add_rules = array (
     
         array (
             'field' => 'page_id',
-            'label' => 'ID ñòðàíèöû',
+            'label' => 'ID ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹',
             'rules' => 'required|az_numeric|uniq[page_id]'
         ),
         
         array (
             'field' => 'title',
-            'label' => 'Íàçâàíèå',
+            'label' => 'ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ',
             'rules' => 'required|valid_title'
         ),
         
         array (
             'field' => 'text',
-            'label' => 'Òåêñò',
+            'label' => 'Ð¢ÐµÐºÑÑ‚',
             'rules' => ''
         ),
         
         array (
             'field' => 'date',
-            'label' => 'Äàòà',
+            'label' => 'Ð”Ð°Ñ‚Ð°',
             'rules' => 'required|numeric'
         ),
         
         array (
             'field' => 'showed',
-            'label' => 'Ïîêàçûâàòü',
+            'label' => 'ÐŸÐ¾ÐºÐ°Ð·Ñ‹Ð²Ð°Ñ‚ÑŒ',
             'rules' => 'numeric'
         )
     
     );
     
-    // Ïðàâèëà âàëèäàöèè äëÿ ðåäàêòèðîâàíèÿ
+    // ÐŸÑ€Ð°Ð²Ð¸Ð»Ð° Ð²Ð°Ð»Ð¸Ð´Ð°Ñ†Ð¸Ð¸ Ð´Ð»Ñ Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ
     var $edit_rules = array (
         
         array (
             'field' => 'title',
-            'label' => 'Íàçâàíèå',
+            'label' => 'ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ',
             'rules' => 'required|valid_title'
         ),
         
         array (
             'field' => 'text',
-            'label' => 'Òåêñò',
+            'label' => 'Ð¢ÐµÐºÑÑ‚',
             'rules' => ''
         ),
         
         array (
             'field' => 'showed',
-            'label' => 'Ïîêàçûâàòü',
+            'label' => 'ÐŸÐ¾ÐºÐ°Ð·Ñ‹Ð²Ð°Ñ‚ÑŒ',
             'rules' => 'numeric'
         )
     

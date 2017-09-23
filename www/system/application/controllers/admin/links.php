@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Îïèñàíèå ôàéëà: Êîíòðîëëåð "Ññûëêè"
+ * ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ñ„Ð°Ð¹Ð»Ð°: ÐšÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð»ÐµÑ€ "Ð¡ÑÑ‹Ð»ÐºÐ¸"
  * @author KNARS
  * @copyright 25.5.2017 22:43
  */
@@ -13,55 +13,55 @@ class Links extends Controller {
     var $iname = 'link';
         
     /**
-     * Êîíñòðóêòîð
+     * ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€
      */
     function Links () {
         
         parent::Controller();
         
-        $mdl_name = 'mdl_'.$this->iname; // Èìÿ ìîäåëè
+        $mdl_name = 'mdl_'.$this->iname; // Ð˜Ð¼Ñ Ð¼Ð¾Ð´ÐµÐ»Ð¸
         
-        $this->load->model($mdl_name); // Çàãðóæàåì ìîäåëü        
+        $this->load->model($mdl_name); // Ð—Ð°Ð³Ñ€ÑƒÐ¶Ð°ÐµÐ¼ Ð¼Ð¾Ð´ÐµÐ»ÑŒ        
         
     }
     
     /**
-     * Ñïèñîê ññûëîê
+     * Ð¡Ð¿Ð¸ÑÐ¾Ðº ÑÑÑ‹Ð»Ð¾Ðº
      */
     function index ($link_num = 0) {
         
-        $this->lib_mng->show_index($this->iname, 'Ñïèñîê ññûëîê', $link_num);
+        $this->lib_mng->show_index($this->iname, 'Ð¡Ð¿Ð¸ÑÐ¾Ðº ÑÑÑ‹Ð»Ð¾Ðº', $link_num);
     }
     
     /**
-     * Äîáàâëåíèå íîâîé ññûëêè
+     * Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð½Ð¾Ð²Ð¾Ð¹ ÑÑÑ‹Ð»ÐºÐ¸
      */
     function add () {
         
-        $this->lib_mng->add($this->iname, 'Äîáàâëåíèå íîâîé ññûëêè');
+        $this->lib_mng->add($this->iname, 'Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð½Ð¾Ð²Ð¾Ð¹ ÑÑÑ‹Ð»ÐºÐ¸');
         
     }
     
     /**
-     * Ïðîñìîòð ññûëêè
+     * ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ ÑÑÑ‹Ð»ÐºÐ¸
      */
     function show ($id) {
         
-        $this->lib_mng->show($this->iname, $id, 'Ïðîñìîòð ññûëêè');
+        $this->lib_mng->show($this->iname, $id, 'ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ ÑÑÑ‹Ð»ÐºÐ¸');
         
     }
      
     /**
-     * Ðåäàêòèðîâàíèå ññûëêè
+     * Ð ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ ÑÑÑ‹Ð»ÐºÐ¸
      */
     function edit ($id) {
         
-        $this->lib_mng->edit($this->iname, $id, 'Èçìåíåíèå ññûëêè');
+        $this->lib_mng->edit($this->iname, $id, 'Ð˜Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ðµ ÑÑÑ‹Ð»ÐºÐ¸');
         
     }
      
     /**
-     * Óäàëåíèå ññûëêè
+     * Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ ÑÑÑ‹Ð»ÐºÐ¸
      */
     function del ($id) {
         
@@ -70,7 +70,7 @@ class Links extends Controller {
     }
      
     /**
-     * Ñîðòèðîâêà
+     * Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ°
      */
     function sort ($field) {
         
@@ -79,7 +79,7 @@ class Links extends Controller {
     }
       
     /**
-     * Ïîèñê
+     * ÐŸÐ¾Ð¸ÑÐº
      */
     function search () {
         $this->lib_mng->do_search($this->iname);

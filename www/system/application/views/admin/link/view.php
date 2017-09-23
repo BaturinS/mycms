@@ -1,9 +1,9 @@
 <div align="left" style="padding: 0px 20px">
-    <p><b>ID-ссылки:</b> <?=$link_id?></p>
-    <p><b>Описание ссылки:</b> <?=$descr?></p>
+    <p><b>ID-СЃСЃС‹Р»РєРё:</b> <?=$link_id?></p>
+    <p><b>РћРїРёСЃР°РЅРёРµ СЃСЃС‹Р»РєРё:</b> <?=$descr?></p>
     <p><b>URL:</b> <?=$url?></p>
-    <p><b>Кликов:</b> <?=$cliks?></p>
+    <p><b>РљР»РёРєРѕРІ:</b> <?=$cliks?></p>
 </div>
-<p><?=anchor('admin/links/edit/'.$link_id, 'Редактировать ссылку')?></p>
-<p><?=anchor('admin/links/del/'.$link_id, 'Удалить ссылку')?></p>
-<p><?=anchor('admin/links', 'Вернуться к списку ссылок')?></p>
+<p><?=anchor('admin/links/edit/'.$link_id, 'Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ СЃСЃС‹Р»РєСѓ')?></p>
+<p><?=anchor('admin/links/del/'.$link_id, 'РЈРґР°Р»РёС‚СЊ СЃСЃС‹Р»РєСѓ')?></p>
+<p><?=anchor('admin/links', 'Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРїРёСЃРєСѓ СЃСЃС‹Р»РѕРє')?></p>

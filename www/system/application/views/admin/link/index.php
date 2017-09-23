@@ -3,10 +3,10 @@
 <table width="780" border="1" align="center" cellpadding="4" cellspacing="0">
 
 <tr>
-    <th width="100"><?=anchor('admin/links/sort/link_id', 'ID ссылки')?></th>
-    <th width="240"><?=anchor('admin/links/sort/descr', 'Название ссылки')?></th>
-    <th><?=anchor('admin/links/sort/url', 'URL ссылки')?></th>
-    <th width="80"><?=anchor('admin/links/sort/cliks', 'Кликов')?></th>
+    <th width="100"><?=anchor('admin/links/sort/link_id', 'ID СЃСЃС‹Р»РєРё')?></th>
+    <th width="240"><?=anchor('admin/links/sort/descr', 'РќР°Р·РІР°РЅРёРµ СЃСЃС‹Р»РєРё')?></th>
+    <th><?=anchor('admin/links/sort/url', 'URL СЃСЃС‹Р»РєРё')?></th>
+    <th width="80"><?=anchor('admin/links/sort/cliks', 'РљР»РёРєРѕРІ')?></th>
 </tr>
 
 <? foreach ($list as $one) : ?>
@@ -26,7 +26,7 @@
 
 <? else : ?>
 
-Нет записей
+РќРµС‚ Р·Р°РїРёСЃРµР№
 
 <? endif; ?>
 
@@ -35,16 +35,16 @@
 <table align="center" border="0">
 
     <tr>
-        <td>Поиск:<br /><input type="text" name="str" value="" /></td>
+        <td>РџРѕРёСЃРє:<br /><input type="text" name="str" value="" /></td>
         <td><br /><select name="field">
-        <option value="link_id">ID ссылки</option>
-        <option value="descr">Название ссылки</option>
+        <option value="link_id">ID СЃСЃС‹Р»РєРё</option>
+        <option value="descr">РќР°Р·РІР°РЅРёРµ СЃСЃС‹Р»РєРё</option>
         <option value="url">URL</option>
         </select></td>
     </tr>
     
     <tr>
-        <td><input type="submit" value="Найти" /></td><td>&nbsp;</td>
+        <td><input type="submit" value="РќР°Р№С‚Рё" /></td><td>&nbsp;</td>
     </tr>
 
 </table>
@@ -53,4 +53,4 @@
 
 <br />
 
-<p><?=anchor('admin/links/add/', 'Добавить новую ссылку')?></p>
+<p><?=anchor('admin/links/add/', 'Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІСѓСЋ СЃСЃС‹Р»РєСѓ')?></p>

@@ -77,7 +77,7 @@ $config['language'] = "russian";
 | that require a character set to be provided.
 |
 */
-$config['charset'] = "CP-1251";
+$config['charset'] = "utf-8";
 
 /*
 |--------------------------------------------------------------------------

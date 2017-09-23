@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Îïèñàíèå ôàéëà: Êîíòðîëëåð âõîäà è âûõîäà äëÿ àäìèíêè
+ * ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ñ„Ð°Ð¹Ð»Ð°: ÐšÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð»ÐµÑ€ Ð²Ñ…Ð¾Ð´Ð° Ð¸ Ð²Ñ‹Ñ…Ð¾Ð´Ð° Ð´Ð»Ñ Ð°Ð´Ð¼Ð¸Ð½ÐºÐ¸
  * 
  * @author KNARS
  * @copyright 9.5.2017 2:15
@@ -12,11 +12,11 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Lunit extends Controller {
     
     function login () {
-        echo 'Âõîä';
+        echo 'Ð’Ñ…Ð¾Ð´';
     }
     
     function logout () {
-        echo 'Âûõîä';
+        echo 'Ð’Ñ‹Ñ…Ð¾Ð´';
     }
     
 }

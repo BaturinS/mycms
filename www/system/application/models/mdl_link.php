@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Îïèñàíèå ôàéëà: Ìîäåëü äëÿ "Ññûëîê"
+ * ĞĞ¿Ğ¸ÑĞ°Ğ½Ğ¸Ğµ Ñ„Ğ°Ğ¹Ğ»Ğ°: ĞœĞ¾Ğ´ĞµĞ»ÑŒ Ğ´Ğ»Ñ "Ğ¡ÑÑ‹Ğ»Ğ¾Ğº"
  * @author KNARS
  * @copyright 25.5.2017 22:38
  */
@@ -10,21 +10,21 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class mdl_link extends CRUD {
     
-    var $table = 'links'; // Èìÿ òàáëèöû
+    var $table = 'links'; // Ğ˜Ğ¼Ñ Ñ‚Ğ°Ğ±Ğ»Ğ¸Ñ†Ñ‹
     var $idkey = 'link_id';
     
-    // Ïğàâèëà âàëèäàöèè äëÿ äîáàâëåíèÿ
+    // ĞŸÑ€Ğ°Ğ²Ğ¸Ğ»Ğ° Ğ²Ğ°Ğ»Ğ¸Ğ´Ğ°Ñ†Ğ¸Ğ¸ Ğ´Ğ»Ñ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ñ
     var $add_rules = array (
     
         array (
             'field' => 'link_id',
-            'label' => 'ID ññûëêè',
+            'label' => 'ID ÑÑÑ‹Ğ»ĞºĞ¸',
             'rules' => 'required|az_numeric|uniq[link_id]'
         ),
         
         array (
             'field' => 'descr',
-            'label' => 'Îïèñàíèå',
+            'label' => 'ĞĞ¿Ğ¸ÑĞ°Ğ½Ğ¸Ğµ',
             'rules' => 'required|valid_title'
         ),
         
@@ -36,12 +36,12 @@ class mdl_link extends CRUD {
     
     );
     
-    // Ïğàâèëà âàëèäàöèè äëÿ ğåäàêòèğîâàíèÿ
+    // ĞŸÑ€Ğ°Ğ²Ğ¸Ğ»Ğ° Ğ²Ğ°Ğ»Ğ¸Ğ´Ğ°Ñ†Ğ¸Ğ¸ Ğ´Ğ»Ñ Ñ€ĞµĞ´Ğ°ĞºÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ
     var $edit_rules = array (
         
         array (
             'field' => 'descr',
-            'label' => 'Îïèñàíèå',
+            'label' => 'ĞĞ¿Ğ¸ÑĞ°Ğ½Ğ¸Ğµ',
             'rules' => 'required|valid_title'
         ),
         

@@ -3,20 +3,20 @@
 <table border="0" width="600" align="left" cellspacing="4">
 
 <tr>
-    <td align="right"><b>ID для ссылки:</b></td>
+    <td align="right"><b>ID СЃСЃС‹Р»РєРё:</b></td>
     <td align="left"><?=$link_id?></td>
 </tr>
 <tr>
-    <td align="right"><b>Названия для ссылки: </b></td>
+    <td align="right"><b>РќР°Р·РІР°РЅРёРµ СЃСЃС‹Р»РєРё: </b></td>
     <td align="left"><input type="text" name="descr" value="<?=set_value('descr', $descr)?>" /></td>
 </tr>
 <tr>
-    <td align="right"><b>URL ссылки:</b></td>
+    <td align="right"><b>URL СЃСЃС‹Р»РєРё:</b></td>
     <td align="left"><input type="text" name="url" value="<?=set_value('url', $url)?>" /></td>
 </tr>
 <tr>
     <td align="right">&nbsp;</td>
-    <td align="left"><input type="submit" value="Сохранить изменения" /></td>
+    <td align="left"><input type="submit" value="РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ" /></td>
 </tr>
 
 </table>

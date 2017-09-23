@@ -3,10 +3,10 @@
 <table width="780" border="1" align="center" cellpadding="4" cellspacing="0">
 
 <tr>
-    <th width="100"><?=anchor('admin/pages/sort/page_id', 'ID страницы')?></th>
-    <th><?=anchor('admin/pages/sort/title', 'Название страницы')?></th>
-    <th width="130"><?=anchor('admin/pages/sort/date', 'Дата добавления')?></th>
-    <th width="80"><?=anchor('admin/pages/sort/showed', 'Показывать')?></th>
+    <th width="100"><?=anchor('admin/pages/sort/page_id', 'ID СЃС‚СЂР°РЅРёС†С‹')?></th>
+    <th><?=anchor('admin/pages/sort/title', 'РќР°Р·РІР°РЅРёРµ СЃС‚СЂР°РЅРёС†С‹')?></th>
+    <th width="130"><?=anchor('admin/pages/sort/date', 'Р”Р°С‚Р° РґРѕР±Р°РІР»РµРЅРёСЏ')?></th>
+    <th width="80"><?=anchor('admin/pages/sort/showed', 'РџРѕРєР°Р·С‹РІР°С‚СЊ')?></th>
 </tr>
 
 <? foreach ($list as $one) : ?>
@@ -15,7 +15,7 @@
     <td><?=anchor('admin/pages/show/'.$one['page_id'], $one['page_id']); ?></td>
     <td><?=$one['title']?></td>
     <td><font color="#003366"><?=date('j.m.Y H:i',$one['date'])?></font></td>
-    <td><font color="#003366"><?=($one['showed'])?'Да':'Нет'?></font></td>
+    <td><font color="#003366"><?=($one['showed'])?'Р”Р°':'РќРµС‚'?></font></td>
 </tr>
 
 <? endforeach; ?>
@@ -26,7 +26,7 @@
 
 <? else : ?>
 
-Нет записей
+РќРµС‚ Р·Р°РїРёСЃРµР№
 
 <? endif; ?>
 
@@ -35,16 +35,16 @@
 <table align="center" border="0">
 
     <tr>
-        <td>Поиск:<br /><input type="text" name="str" value="" /></td>
+        <td>РџРѕРёСЃРє:<br /><input type="text" name="str" value="" /></td>
         <td><br /><select name="field">
-        <option value="page_id">ID страницы</option>
-        <option value="title">Название страницы</option>
-        <option value="text">Текст страницы</option>
+        <option value="page_id">ID СЃС‚СЂР°РЅРёС†С‹</option>
+        <option value="title">РќР°Р·РІР°РЅРёРµ СЃС‚СЂР°РЅРёС†С‹</option>
+        <option value="text">РўРµРєСЃС‚ СЃС‚СЂР°РЅРёС†С‹</option>
         </select></td>
     </tr>
     
     <tr>
-        <td><input type="submit" value="Найти" /></td><td>&nbsp;</td>
+        <td><input type="submit" value="РќР°Р№С‚Рё" /></td><td>&nbsp;</td>
     </tr>
 
 </table>
@@ -53,4 +53,4 @@
 
 <br />
 
-<p><?=anchor('admin/pages/add/', 'Добавить новую страницу')?></p>
+<p><?=anchor('admin/pages/add/', 'Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ')?></p>

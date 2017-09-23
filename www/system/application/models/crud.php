@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Îïèñàíèå ôàéëà: Îáùàÿ äëÿ âñåõ ìîäåëü
+ * ĞĞ¿Ğ¸ÑĞ°Ğ½Ğ¸Ğµ Ñ„Ğ°Ğ¹Ğ»Ğ°: ĞĞ±Ñ‰Ğ°Ñ Ğ´Ğ»Ñ Ğ²ÑĞµÑ… Ğ¼Ğ¾Ğ´ĞµĞ»ÑŒ
  * @author KNARS
  * @copyright 18.5.2017 19:43
  */
@@ -10,23 +10,23 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Crud extends Model {
     
-    var $table = ''; //Èìÿ òàáëèöû
+    var $table = ''; //Ğ˜Ğ¼Ñ Ñ‚Ğ°Ğ±Ğ»Ğ¸Ñ†Ñ‹
     
-    var $idkey = 'id'; //Êëş÷ ID
+    var $idkey = 'id'; //ĞšĞ»ÑÑ‡ ID
     
-    var $add_rules = array(); //Ïğàâèëà âàëèäàöèè äëÿ äîáàâëåíèÿ
+    var $add_rules = array(); //ĞŸÑ€Ğ°Ğ²Ğ¸Ğ»Ğ° Ğ²Ğ°Ğ»Ğ¸Ğ´Ğ°Ñ†Ğ¸Ğ¸ Ğ´Ğ»Ñ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ñ
     
-    var $edit_rules = array(); //Ïğàâèëà âàëèäàöèè äëÿ ğåäàêòèğîâàíèÿ
+    var $edit_rules = array(); //ĞŸÑ€Ğ°Ğ²Ğ¸Ğ»Ğ° Ğ²Ğ°Ğ»Ğ¸Ğ´Ğ°Ñ†Ğ¸Ğ¸ Ğ´Ğ»Ñ Ñ€ĞµĞ´Ğ°ĞºÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ
     
     /**
-     * Êîíñòğóêòîğ
+     * ĞšĞ¾Ğ½ÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€
      */
     function Crud () {
         parent::Model();
     }
     
     /**
-     * Ôóíêöèÿ äîáàâëåíèÿ
+     * Ğ¤ÑƒĞ½ĞºÑ†Ğ¸Ñ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ñ
      */
     function add () {
         
@@ -43,7 +43,7 @@ class Crud extends Model {
             }
         
         	$this->db->insert($this->table, $data);
-            return $this->db->insert_id(); //Âîçâğàùàåò íîìåğ òîâàğà
+            return $this->db->insert_id(); //Ğ’Ğ¾Ğ·Ğ²Ñ€Ğ°Ñ‰Ğ°ĞµÑ‚ Ğ½Ğ¾Ğ¼ĞµÑ€ Ñ‚Ğ¾Ğ²Ğ°Ñ€Ğ°
             
         } else {
             
@@ -53,7 +53,7 @@ class Crud extends Model {
     }
     
     /**
-     * Ôóíêöèÿ ğåäàêòèğîâàíèÿ
+     * Ğ¤ÑƒĞ½ĞºÑ†Ğ¸Ñ Ñ€ĞµĞ´Ğ°ĞºÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ
      */
     function edit ($id) {
         
@@ -82,7 +82,7 @@ class Crud extends Model {
     }
     
     /**
-     * Ôóíêöèÿ óäàëåíèÿ
+     * Ğ¤ÑƒĞ½ĞºÑ†Ğ¸Ñ ÑƒĞ´Ğ°Ğ»ĞµĞ½Ğ¸Ñ
      */
     function del ($id) {
         $this->db->where($this->idkey, $id);
@@ -90,7 +90,7 @@ class Crud extends Model {
     }
     
     /**
-     * Ïîëó÷åíèå äàííûõ
+     * ĞŸĞ¾Ğ»ÑƒÑ‡ĞµĞ½Ğ¸Ğµ Ğ´Ğ°Ğ½Ğ½Ñ‹Ñ…
      */
     function get ($id) {
         $this->db->where($this->idkey, $id);
@@ -99,31 +99,31 @@ class Crud extends Model {
     }
     
     /**
-     * Ïîëó÷åíèå ñïèñêà
+     * ĞŸĞ¾Ğ»ÑƒÑ‡ĞµĞ½Ğ¸Ğµ ÑĞ¿Ğ¸ÑĞºĞ°
      */
     function getlist ($start_from = FALSE) {
         
-        // Ñòàâèì ñïèñîê ñîğòèğîâêè
+        // Ğ¡Ñ‚Ğ°Ğ²Ğ¸Ğ¼ ÑĞ¿Ğ¸ÑĞ¾Ğº ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²ĞºĞ¸
         $sort_by = $this->session->userdata('sort_by');
         $sort_dir = $this->session->userdata('sort_dir');
         
-        // Åñëè íå ïóñòûå çíà÷åíèÿ, òî ñòàâèì ñîğòèğîâêó
+        // Ğ•ÑĞ»Ğ¸ Ğ½Ğµ Ğ¿ÑƒÑÑ‚Ñ‹Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ, Ñ‚Ğ¾ ÑÑ‚Ğ°Ğ²Ğ¸Ğ¼ ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²ĞºÑƒ
         if (!empty($sort_by)) {
             $this->db->order_by($sort_by, $sort_dir);
         }
         
-        // Äëÿ ïîèñêà
+        // Ğ”Ğ»Ñ Ğ¿Ğ¾Ğ¸ÑĞºĞ°
         $search = $this->session->userdata('search');
         $search_by = $this->session->userdata('search_by');
         
-        // Åñëè íå ïóñòûå çíà÷åíèÿ, òî ñòàâèì ïîèñê
+        // Ğ•ÑĞ»Ğ¸ Ğ½Ğµ Ğ¿ÑƒÑÑ‚Ñ‹Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ, Ñ‚Ğ¾ ÑÑ‚Ğ°Ğ²Ğ¸Ğ¼ Ğ¿Ğ¾Ğ¸ÑĞº
         if (!empty($search)) {
             $this->db->like($search_by, '%'.$search.'%');
         }
         
         if ($start_from !== FALSE) {
             $this->db->limit($this->config->item('cms_per_page'), $start_from);
-            // Îãğàíè÷åíèå
+            // ĞĞ³Ñ€Ğ°Ğ½Ğ¸Ñ‡ĞµĞ½Ğ¸Ğµ
         }
         
         $query = $this->db->get($this->table);
