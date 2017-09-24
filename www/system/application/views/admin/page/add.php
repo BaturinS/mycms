@@ -1,4 +1,5 @@
 <?=form_open('admin/pages/add')?>
+<?=show_tinymce('mytext')?>
 
 <table border="0" width="600" cellspacing="4">
 
@@ -25,7 +26,7 @@
         <b>Текст страницы</b>
         <br />
         <br />
-        <textarea name="text" cols="60" rows="12"><?=set_value('text','Текст страницы')?>
+        <textarea id="mytext" name="text" cols="60" rows="12"><?=set_value('text','Текст страницы')?>
         </textarea>
     </td>
 </tr>
