@@ -13,7 +13,8 @@
 <p><b>
 <?=anchor('admin', 'Главная')?> 
 | <?=anchor('admin/pages/index/list', 'Страницы')?> 
-| <?=anchor('admin/links/index/list', 'Ссылки')?> 
+| <?=anchor('admin/links/index/list', 'Ссылки')?>
+| <?=anchor('admin/images', 'Картинки')?>  
 | <?=anchor('admin/settings', 'Настройки')?> 
 | <?=anchor('admin/logout', 'Выход')?></b></p>
 <h1><?=$page_title?></h1>

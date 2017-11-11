@@ -38,7 +38,7 @@ class Pages extends Controller {
      */
     function add () {
         
-        $this->load->helper('tynimce');
+        $this->load->helper('tinymce');
         $this->lib_mng->add($this->iname, 'Добавление новой страницы');
         
     }
@@ -57,7 +57,7 @@ class Pages extends Controller {
      */
     function edit ($id) {
         
-        $this->load->helper('tynimce');
+        $this->load->helper('tinymce');
         $this->lib_mng->edit($this->iname, $id, 'Изменение страницы');
         
     }
